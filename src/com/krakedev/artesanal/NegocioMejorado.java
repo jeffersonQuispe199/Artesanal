@@ -25,4 +25,27 @@ public class NegocioMejorado {
 	        int numero = (int) (Math.random() * 100) + 1;
 	        return "M-" + numero;
 	    }
+	 //  Método agregarMaquina
+	    public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+			String codigo = generarCodigo();
+			Maquina nuevaMaquina = new Maquina(codigo, nombreCerveza, descripcion, precioPorMl);
+			this.maquinas.add(nuevaMaquina);
+		}
+	 // Metodo cargarMaquina
+		public void cargarMaquinas() {
+			for (int i = 0; i < this.maquinas.size(); i++) {
+				Maquina m = this.maquinas.get(i);
+				m.llenarMaquina();
+			}
+		}
+		// 6. Método recuperarMaquina
+		public Maquina recuperarMaquina(String codigo) {
+			for (Maquina m : this.maquinas) {
+				
+				if (m.getCodigo().equals(codigo)) {
+					return m; 
+				}
+			}
+			return null; 
+		}
 }
