@@ -25,11 +25,17 @@ public class NegocioMejorado {
 	        int numero = (int) (Math.random() * 100) + 1;
 	        return "M-" + numero;
 	    }
-	 //  Método agregarMaquina
-	    public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	 // 7. Método agregarMaquina modificado con retorno boolean y validación
+		public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 			String codigo = generarCodigo();
+
+			if (this.recuperarMaquina(codigo) != null) {
+				return false;
+			}
+
 			Maquina nuevaMaquina = new Maquina(codigo, nombreCerveza, descripcion, precioPorMl);
 			this.maquinas.add(nuevaMaquina);
+			return true;
 		}
 	 // Metodo cargarMaquina
 		public void cargarMaquinas() {
