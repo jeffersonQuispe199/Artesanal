@@ -1,57 +1,51 @@
 package com.krakedev.artesanal;
 
-
-
 public class Cliente {
+    private String codigo;
+    private String cedula;
+    private String nombre;
+    private double totalConsumido;
 
-	private String codigo;
-	private String nombre;
-	private String cedula;
+    public Cliente() {
+    }
 
-	// Constructor por defecto
-	public Cliente() {
-	}
+    // Constructor: asegúrate de asignarlos al atributo correcto
+    public Cliente(String codigo, String cedula, String nombre) {
+        this.codigo = codigo;
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.totalConsumido = 0.0;
+    }
 
-	// Constructor con parámetros
-	public Cliente(String codigo, String nombre, String cedula) {
-		this.codigo = codigo;
-		this.nombre = nombre;
-		this.cedula = cedula;
-	}
+    public String getCodigo() {
+        return codigo;
+    }
 
-	// Getters y Setters
-	public String getCodigo() {
-		return codigo;
-	}
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
-	
+    public String getCedula() {
+        return cedula;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public String getCedula() {
-		return cedula;
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public void setCedula(String cedula) {
-		this.cedula = cedula;
-	}
+    public double getTotalConsumido() {
+        return totalConsumido;
+    }
 
-	public double getTotalConsumido() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public void setTotalConsumido(double d) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void setTotalConsumido(double totalConsumido) {
+        this.totalConsumido = totalConsumido;
+    }
 }
