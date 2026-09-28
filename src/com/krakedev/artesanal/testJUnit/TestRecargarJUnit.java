@@ -15,6 +15,7 @@ public void testRecargaExitosa() {
 	assertTrue(resultado);
 	assertEquals(3000,rubia.getCantidadActual(),0.0001);
 	
+	
 }
 	@Test
 public void testRecargaFallidaPorDesborde() {

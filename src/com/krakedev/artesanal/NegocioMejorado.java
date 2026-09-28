@@ -9,6 +9,7 @@ public class NegocioMejorado {
 
 	public NegocioMejorado() {
 		this.maquinas = new ArrayList<>();
+		
 		// clientes se mantiene sin inicializar
 	}
 
